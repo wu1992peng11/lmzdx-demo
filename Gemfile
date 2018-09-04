@@ -1,4 +1,4 @@
-source 'https://rubygems.org'
+source 'https://mirrors.tuna.tsinghua.edu.cn/rubygems/'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.4.4'
@@ -60,3 +60,10 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+group :development do
+  gem 'capistrano', '~> 3.11'
+  gem 'capistrano-passenger', '~> 0.2.0'
+  gem 'capistrano-rbenv', '~> 2.1', '>= 2.1.3'
+  gem 'capistrano-bundler', '~> 1.3'
+end
